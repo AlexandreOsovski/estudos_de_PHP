@@ -80,4 +80,5 @@ for ($i=0; $i < count($array_associativo) ; $i++) {
 echo PHP_EOL;
 //Com esse código, a cada nova iteração a função count será chamada. Se nosso array tiver 100 elementos, a função será chamada 100 vezes. 
 //Isso pode acabar prejudicando a performance, 
-//então o ideal é chamar a função count antes do nosso for e ter seu resultado armazenado em uma variável. ;-)
+//então o ideal é chamar a função count antes do nosso for e ter seu resultado armazenado em uma variável.
+
