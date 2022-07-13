@@ -151,7 +151,49 @@ $notas14 = [
     
 ];
 
-$unindoArrays = [...$notas9, 'Alexandre Valente Osovski' , ...$notas10]; //* Aqui eu posso adicionar um elemento solto entre os arrays, utilizando os 3 pontinhos
-var_dump($unindoArrays);
+//$unindoArrays = [...$notas9, 'Alexandre Valente Osovski' , ...$notas10]; //* Aqui eu posso adicionar um elemento solto entre os arrays, utilizando os 3 pontinhos
+//var_dump($unindoArrays); //* irá retornar um erro de string nas versões menores que 8.1 do PHP
+
+//! adicionando e removendo itens de um array
+
+
+$notas15 = [
+    'maria' ,
+    'João' ,
+    'josé' ,
+    'claudio' ,
+    'Mario',
+];
+
+$notas16 = [
+    'maria' ,
+    'João' ,
+    'claudio' ,
+    'josé',
+    
+];
+
+$alunosAdicionados = [...$notas16, ...$notas16] ;//* desmonta os arrays informados
+array_push($notas16 , 'Alice', 'bob', 'charlie');//* apenas mostra quantos elementos possui dentro do array, neste caso int[7]
+var_dump($alunosAdicionados); //* retora todos os arrays desmontados que foram informados dentro da variavel e adiciona os elementos informados dentro de array_push
+
+//! podemos usar o que aprendemos no inicio do curso para adicionar valores dentro do arrays
+
+$alunosAdicionados[] = 'Marcelo'; // * adiciona o elemento no final do array
+$alunosAdicionados[] = 'Josias';
+$alunosAdicionados[] = 'Harry Potter';
+
+var_dump($alunosAdicionados); //* retorna todos os elementos adicionados dentro do array
+var_dump(array_push($alunosAdicionados)); //* exibe int(11), ou seja, possui 11 itens dentro desse array
+
+//! adicionar e remover itens no inicio e no final do array
+
+array_unshift($alunosAdicionados, 'Alice', 'rafaela'); //* passou esses nomes como os primeiros dentro do array, reordenou os indices
+var_dump($alunosAdicionados);
+
+echo PHP_EOL;
+
+array_pop($alunosAdicionados);//* remove o ultimo item do array
+var_dump($alunosAdicionados);
 
 
