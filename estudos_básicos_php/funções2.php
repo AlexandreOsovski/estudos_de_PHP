@@ -10,13 +10,13 @@ function mensagem($mensagem)
 }
 
 $contasCorrentes = [
-    '089.993.919-84' => ['Nome' => 'Alexandre', 'Saldo' => 4000],
-    "089.993.919-82" => ['Nome' => 'Alexadre Osovski', 'Saldo' => 3000],
-    '089.993.919-83' => ['Nome' => 'Alexandre Valente', 'Saldo' => 2000],
+    '993.993.993-84' => ['Nome' => 'Alexandre', 'Saldo' => 4000],
+    "993.993.993-82" => ['Nome' => 'Alexadre Osovski', 'Saldo' => 3000],
+    '993.993.993-83' => ['Nome' => 'Alexandre Valente', 'Saldo' => 2000],
 ];
 
-$contasCorrentes['089.993.919-84'] = sacar($contasCorrentes['089.993.919-84'], 500);
-$contasCorrentes['089.993.919-82'] = sacar($contasCorrentes['089.993.919-82'], 500);
+$contasCorrentes['993.993.993-84'] = sacar($contasCorrentes['993.993.993-84'], 500);
+$contasCorrentes['993.993.993-82'] = sacar($contasCorrentes['993.993.993-82'], 500);
 
 //função executa e devolve um valor
 
@@ -31,7 +31,7 @@ function sacar(array $conta, float $valor) : array
     return $conta;
 }
 
-$contasCorrentes['089.993.919-83'] = depositar($contasCorrentes['089.993.919-83'], 1.45);
+$contasCorrentes['993.993.993-83'] = depositar($contasCorrentes['993.993.993-83'], 1.45);
 
 function depositar(array $conta, float $valorDepositar) : array //o array no final define que estamos esperando que o valor retornado seja um array
 { //adicionar o parâmetro "float" indica que só podemos adicionar valores numéricos
