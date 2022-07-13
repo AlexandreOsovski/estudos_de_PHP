@@ -26,13 +26,13 @@ function titularLetrasMaiusculas(array & $conta) // o & comercial indica que eu 
 }
 
 $contasCorrentes = [
-    '089.993.919-81' => ['nome' => 'Alexandre', 'saldo' => '600'],
-    '089.993.919-91' => ['nome' => 'Andre' , 'saldo' => 3000],
+    '993' => ['nome' => 'Alexandre', 'saldo' => '600'],
+    '993' => ['nome' => 'Andre' , 'saldo' => 3000],
 ];
 
-titularLetrasMaiusculas($contasCorrentes['089.993.919-81']); //chamando a função para deixar todas as letras maiusculas
+titularLetrasMaiusculas($contasCorrentes['993']); //chamando a função para deixar todas as letras maiusculas
 
-$contasCorrentes['089.993.919-81'] = sacar($contasCorrentes['089.993.919-81'] , 500 );
+$contasCorrentes['993'] = sacar($contasCorrentes['993'] , 500 );
 
 foreach ($contasCorrentes as $key => $dadosConta) {
     mensagem(" Seu CPF é: $key, Seu nome é: $dadosConta[nome], Seu saldo é: $dadosConta[saldo]");
@@ -75,7 +75,7 @@ Em alguns casos pode fazer sentido excluir uma variável ou até mesmo o índice
 
 */
 
-unset($contasCorrentes['089.993.919-81']);//caso a gente não use mais uma variável no restante do código, podemos usar o unset
+unset($contasCorrentes['993']);//caso a gente não use mais uma variável no restante do código, podemos usar o unset
 
 //Podemos dar um unset em duas variáveis separadamente, é o mais correto.
 
