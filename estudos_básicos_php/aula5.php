@@ -56,7 +56,7 @@ foreach ($idadeList as $key => $idades) {
 foreach ($contasCorrentes as $cpf => $contas) //$contasCorrentes com $key passa a ser $contas
 {
     list('nome' => $titular , "saldo" => $saldo) = $contas; //pega os dados da list que é igual a $contas
-    mensagem("$cpf $titular $saldo") . PHP_EOL;
+    mensagem(" $cpf $titular $saldo") . PHP_EOL;
 }
 echo PHP_EOL;
 
