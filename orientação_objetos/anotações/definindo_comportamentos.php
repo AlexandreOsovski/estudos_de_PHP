@@ -1,7 +1,17 @@
 <?php
 
-//! primeiro método
 
+//!   FUNDAMENTOS DA ORIENTAÇÃO A OBJETOS
+
+//!    Abstração
+//?     trazer apenas o necessário (as informações privadas)
+
+//!    Encapsulamento
+//?     expor apenas o necessário (as funções que definimos no arquivo metodos_contas.php)
+//?     O encapsulamento ajuda a garantir que os nossos objetos se mantenham em um estado consistente, e também facilita o uso da nossa classe por outros desenvolvedores.
+
+
+//! primeiro método
 class ContaTeste
 {
 
@@ -50,10 +60,13 @@ class Conta
     {
         if($valorTransferir > $this->saldoTitular){
             echo 'Você não pode fazer essa transferência';
-        } else {
+            
+            return; //* adicionou o return para caso de erro, o código para, caso não de erro, o código executa sem pensar a próxima linha
+        } 
+        
+        //* podemos evitar ao máximo a utilização do ELSE e com isso, estamso tirando um nivel de identação desnecessário
             $this->sacar($valorTransferir);
             $contaDestino->depositar($valorTransferir);
-        }
     }
 }
 
@@ -84,9 +97,8 @@ var_dump($primeiraConta); //* retornou 180
 //? TRANSFERÊNCIA
 $primeiraConta->transferir(80, $segundaConta);
 var_dump($primeiraConta);
-var_dump($segundaConta);
+var_dump($segundaConta); //* retornou 80
 
 
 
 
-//! MÉTODOS COM REFERÊNCIAS
