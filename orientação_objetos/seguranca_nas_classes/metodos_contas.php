@@ -13,8 +13,11 @@ class Conta
 
     //? sempre que um new conta é criado, a função __construct é executada
 
+    //! métodos mágicos são iniciados com 2 underlines no PHP
+
     public function __construct(string $cpf, string $pessoa) //? esse método serve para que quando a gente crie a conta, de cara definimos os valores dessa conta
-    {
+    { //? contruct é executado quando uma nova instância é criada na memória
+
         $this->validarDados($pessoa);
         $this->ValidarCpf($cpf);
         $this->pessoa = $pessoa;
@@ -26,6 +29,13 @@ class Conta
         //? podemos chamar a classe por 'Self'
         
         self :: $numeroDeContas++;
+    }
+
+    public function __destruct() //* destruct é executado quando a instancia deixa de existir na memória
+    {
+        self :: $numeroDeContas--;
+        echo "Não há mais contas";
+        
     }
 
     public static function numeroContas(){
@@ -65,7 +75,7 @@ class Conta
         $contaDestino->depositar($valorTransferir);
     }
 
-    /*
+/*
 
 /  //? Adiciona valores as variáveis CPF e Pessoa(nome da pessoa)
 
@@ -153,3 +163,6 @@ class Conta
         return true;
     }
 }
+
+
+//? criar uma nova classe do tipo cpf que só vai conter o numero do cpfe fazer com que o titular passe a usar essa classe
