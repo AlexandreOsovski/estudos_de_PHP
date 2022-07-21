@@ -14,12 +14,12 @@ class Conta
     } 
 
 
-    public function RecuperaNomeTitular ()
+    public function RecuperaNomeTitular () //* metodo getter
     {
         return $this -> titular -> RecuperarNome();
     }
 
-    public function RecuperaCpfTitular ()
+    public function RecuperaCpfTitular () //* metodo getter
     {
         return $this -> cpfTitular -> RecuperarCPF();
     }
